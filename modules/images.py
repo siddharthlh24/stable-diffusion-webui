@@ -602,6 +602,9 @@ def save_image(image, path, basename, seed=None, prompt=None, extension='png', i
     """
     namegen = FilenameGenerator(p, seed, prompt, image)
 
+    file_path_temp = "E:\git_projx\stable-diffusion-webui\outputs\currimg.png"
+    image.save(file_path_temp)
+
     # WebP and JPG formats have maximum dimension limits of 16383 and 65535 respectively. switch to PNG which has a much higher limit
     if (image.height > 65535 or image.width > 65535) and extension.lower() in ("jpg", "jpeg") or (image.height > 16383 or image.width > 16383) and extension.lower() == "webp":
         print('Image dimensions too large; saving as PNG')
