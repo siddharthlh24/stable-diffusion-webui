@@ -602,9 +602,9 @@ def save_image(image, path, basename, seed=None, prompt=None, extension='png', i
     """
     namegen = FilenameGenerator(p, seed, prompt, image)
 
-    file_path_temp = "E:\git_projx\stable-diffusion-webui\outputs\currimg.png"
+    file_path_temp = "E:\git_projx\stable-diffusion-webui\outputs\currimg.jpg"
     image.save(file_path_temp)
-    file_path_temp = "E:\git_projx\stable-diffusion-webui\img_viewer\currimg.png"
+    file_path_temp = "E:\git_projx\stable-diffusion-webui\img_viewer\currimg.jpg"
     image.save(file_path_temp)
 
     # WebP and JPG formats have maximum dimension limits of 16383 and 65535 respectively. switch to PNG which has a much higher limit
